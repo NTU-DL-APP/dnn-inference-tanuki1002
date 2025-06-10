@@ -48,17 +48,3 @@ def nn_forward_h5(model_arch, weights, data):
 # You are free to replace nn_forward_h5() with your own implementation 
 def nn_inference(model_arch, weights, data):
     return nn_forward_h5(model_arch, weights, data)
-
-# === Testing ===
-# 載入架構和權重
-with open("/kaggle/working/model/fashion_mnist.json") as f:
-    model_arch = json.load(f)
-weights = np.load("/kaggle/working/model/fashion_mnist.npz")
-
-# Load a dummy image (batch size 1)
-# Make sure it's shape: (1, 28, 28, 1)
-dummy_input = np.random.rand(1, 28*28).astype(np.float32)
-output = nn_inference(model_arch, weights, dummy_input)
-
-print("🧠 Output probabilities:", output)
-print("✅ Predicted class:", np.argmax(output, axis=-1))
