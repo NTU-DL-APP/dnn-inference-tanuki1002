@@ -8,7 +8,7 @@ def relu(x):
 
 def softmax(x):
     # Implement the SoftMax function
-    e = np.exp(x - np.max(x))  # 防止 overflow
+    e = np.exp(x - np.max(x, axis=-1, keepdims=True))
     return e / np.sum(e, axis=-1, keepdims=True)
 
 # === Flatten ===
