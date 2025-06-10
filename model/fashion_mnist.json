@@ -1,7 +1,7 @@
 {
   "layers": [
     {
-      "name": "flatten_3",
+      "name": "flatten_4",
       "type": "Flatten",
       "config": {
         "input_shape": [
