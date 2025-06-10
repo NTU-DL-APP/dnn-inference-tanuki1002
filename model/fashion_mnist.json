@@ -1,0 +1,50 @@
+{
+  "layers": [
+    {
+      "name": "flatten_3",
+      "type": "Flatten",
+      "config": {
+        "input_shape": [
+          28,
+          28
+        ]
+      }
+    },
+    {
+      "name": "dense_1",
+      "type": "Dense",
+      "config": {
+        "units": 512,
+        "activation": "relu",
+        "use_bias": true
+      }
+    },
+    {
+      "name": "dense_2",
+      "type": "Dense",
+      "config": {
+        "units": 256,
+        "activation": "relu",
+        "use_bias": true
+      }
+    },
+    {
+      "name": "dense_3",
+      "type": "Dense",
+      "config": {
+        "units": 128,
+        "activation": "relu",
+        "use_bias": true
+      }
+    },
+    {
+      "name": "output",
+      "type": "Dense",
+      "config": {
+        "units": 10,
+        "activation": "softmax",
+        "use_bias": true
+      }
+    }
+  ]
+}
